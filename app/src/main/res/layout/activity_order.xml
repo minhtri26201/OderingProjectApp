@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of Oder"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        <RadioButton
+            android:tag="delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delivery"
+            android:onClick="changeOrder"></RadioButton>
+
+        <RadioButton
+            android:tag="order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="order"
+            android:checked="false"
+            android:onClick="changeOrder">
+
+        </RadioButton>
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:background="#f498ad"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pick-up/Delivery Date" />
+
+    <TextView
+        android:id="@+id/date"
+        android:hint="date"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/editP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:drawableRight="@drawable/icon_calendar"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="dd/mm/yyyy"
+        android:inputType="date"
+        android:onClick="showDate"
+        tools:ignore="OnClick" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:datePickerMode="spinner"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/buttonDate"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="OK"
+        android:visibility="gone"
+        android:onClick="setDate"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pick-up/Delivery Date" />
+
+    <TextView
+        android:id="@+id/time"
+        android:hint="time"
+
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"> </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/hour"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text=":" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/minute"
+            />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spnCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+
+                 </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="chooseFoodScreen"
+        />
+</LinearLayout>
+
+
+
+
+

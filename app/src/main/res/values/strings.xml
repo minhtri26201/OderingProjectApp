@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="method_payment">
+        <item>Credit Card</item>
+        <item>Cash on delivery</item>
+        <item>Check</item>
+        <item>Purchase Order</item>
+        <item>Paypal</item>
+        <item>Bank Transfer</item>
+    </string-array>
+    <string name="app_name" />
+    <string name="banner_alt" />
+</resources>
